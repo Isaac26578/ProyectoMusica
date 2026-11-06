@@ -1,0 +1,57 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+  }
+  
+  /* Sección Hero principal */
+  .hero-section {
+    width: 100%;
+    height: 100vh;
+    
+    /* Uso de la imagen proporcionada */
+    background-image: url('assets/angel.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    
+    /* Centrado del texto superpuesto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Tipografía y estilo del texto centrado */
+  .hero-content h1 {
+    color: #ffffff;
+    font-size: 4.5rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-align: center;
+    user-select: none;
+  }
+  
+  /* Estilos de grosor de fuente */
+  .hero-content .light {
+    font-weight: 300;
+    opacity: 0.9;
+  }
+  
+  .hero-content .bold {
+    font-weight: 900;
+  }
+  
+  /* Adaptación responsive para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.2rem;
+      letter-spacing: 3px;
+    }
+  }
