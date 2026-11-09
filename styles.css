@@ -1,57 +1,149 @@
 /* Reset general */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #ffffff;
-  }
-  
-  /* Sección Hero principal */
-  .hero-section {
-    width: 100%;
-    height: 100vh;
-    
-    /* Uso de la imagen proporcionada */
-    background-image: url('assets/angel.jpg');
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    
-    /* Centrado del texto superpuesto */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  /* Tipografía y estilo del texto centrado */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url('assets/angel.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-content h1 {
+  color: #ffffff;
+  font-size: 4.8rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  user-select: none;
+}
+
+.hero-content .light {
+  font-weight: 300;
+  opacity: 0.85;
+}
+
+.hero-content .bold {
+  font-weight: 900;
+}
+
+.music-section {
+  width: 100%;
+  padding: 100px 10%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.music-container {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.music-text-content {
+  flex: 1;
+  max-width: 480px;
+}
+
+.music-text-content h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.25;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.music-text-content h2 span {
+  color: #ff3366;
+}
+
+.music-text-content p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: #666666;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.music-button {
+  display: inline-block;
+  background-color: #ff3366;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 34px;
+  border-radius: 25px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(255, 51, 102, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.music-button:hover {
+  background-color: #e02855;
+  transform: translateY(-2px);
+}
+
+.music-image {
+  flex: 1;
+  max-width: 420px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.music-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+@media (max-width: 900px) {
   .hero-content h1 {
-    color: #ffffff;
-    font-size: 4.5rem;
-    letter-spacing: 6px;
-    text-transform: uppercase;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+  }
+
+  .music-container {
+    flex-direction: column;
     text-align: center;
-    user-select: none;
+    gap: 40px;
   }
-  
-  /* Estilos de grosor de fuente */
-  .hero-content .light {
-    font-weight: 300;
-    opacity: 0.9;
+
+  .music-text-content {
+    max-width: 100%;
   }
-  
-  .hero-content .bold {
-    font-weight: 900;
+
+  .music-image {
+    max-width: 100%;
+    justify-content: center;
   }
-  
-  /* Adaptación responsive para pantallas más pequeñas */
-  @media (max-width: 768px) {
-    .hero-content h1 {
-      font-size: 2.2rem;
-      letter-spacing: 3px;
-    }
+
+  .music-image img {
+    max-width: 350px;
   }
+}
